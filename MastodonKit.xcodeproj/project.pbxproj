@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		E281078A212A8D5500E5A3C7 /* Decodable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2810789212A8D5500E5A3C7 /* Decodable+Additions.swift */; };
 		E281078B212A8F7C00E5A3C7 /* Decodable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2810789212A8D5500E5A3C7 /* Decodable+Additions.swift */; };
-		E281078C212A8FFE00E5A3C7 /* URLRequest+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8921294ACF0065E2AE /* URLRequest+Auth.swift */; };
+		E281078C212A8FFE00E5A3C7 /* URLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8921294ACF0065E2AE /* URLRequest+Additions.swift */; };
+		E2810792212BADDC00E5A3C7 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2810791212BADDC00E5A3C7 /* Requestable.swift */; };
+		E2810793212BB0EB00E5A3C7 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2810791212BADDC00E5A3C7 /* Requestable.swift */; };
 		E2975B6C212923AA0065E2AE /* MastodonKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2975B62212923AA0065E2AE /* MastodonKit.framework */; };
 		E2975B71212923AA0065E2AE /* MastodonKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B70212923AA0065E2AE /* MastodonKitTests.swift */; };
 		E2975B73212923AA0065E2AE /* MastodonKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E2975B65212923AA0065E2AE /* MastodonKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,7 +23,7 @@
 		E2975B85212940730065E2AE /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8321293F2C0065E2AE /* Instance.swift */; };
 		E2975B87212948C60065E2AE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B86212948C60065E2AE /* AccountTests.swift */; };
 		E2975B88212949830065E2AE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8121293E660065E2AE /* Account.swift */; };
-		E2975B8A21294ACF0065E2AE /* URLRequest+Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8921294ACF0065E2AE /* URLRequest+Auth.swift */; };
+		E2975B8A21294ACF0065E2AE /* URLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8921294ACF0065E2AE /* URLRequest+Additions.swift */; };
 		E2975B8C21294B610065E2AE /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8B21294B610065E2AE /* Timeline.swift */; };
 		E2975B8E21294B890065E2AE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8D21294B890065E2AE /* Status.swift */; };
 		E2975B9021294BCA0065E2AE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8F21294BCA0065E2AE /* User.swift */; };
@@ -44,6 +46,7 @@
 /* Begin PBXFileReference section */
 		E2810789212A8D5500E5A3C7 /* Decodable+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Additions.swift"; sourceTree = "<group>"; };
 		E2810790212B9FF600E5A3C7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E2810791212BADDC00E5A3C7 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		E2975B62212923AA0065E2AE /* MastodonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MastodonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2975B65212923AA0065E2AE /* MastodonKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MastodonKit.h; sourceTree = "<group>"; };
 		E2975B66212923AA0065E2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,7 +58,7 @@
 		E2975B8121293E660065E2AE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		E2975B8321293F2C0065E2AE /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		E2975B86212948C60065E2AE /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
-		E2975B8921294ACF0065E2AE /* URLRequest+Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Auth.swift"; sourceTree = "<group>"; };
+		E2975B8921294ACF0065E2AE /* URLRequest+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Additions.swift"; sourceTree = "<group>"; };
 		E2975B8B21294B610065E2AE /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		E2975B8D21294B890065E2AE /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		E2975B8F21294BCA0065E2AE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -111,7 +114,8 @@
 				E2975B8D21294B890065E2AE /* Status.swift */,
 				E2975B8F21294BCA0065E2AE /* User.swift */,
 				E2810789212A8D5500E5A3C7 /* Decodable+Additions.swift */,
-				E2975B8921294ACF0065E2AE /* URLRequest+Auth.swift */,
+				E2975B8921294ACF0065E2AE /* URLRequest+Additions.swift */,
+				E2810791212BADDC00E5A3C7 /* Requestable.swift */,
 			);
 			path = MastodonKit;
 			sourceTree = "<group>";
@@ -240,7 +244,8 @@
 			files = (
 				E2975B7F2129258D0065E2AE /* App.swift in Sources */,
 				E281078A212A8D5500E5A3C7 /* Decodable+Additions.swift in Sources */,
-				E2975B8A21294ACF0065E2AE /* URLRequest+Auth.swift in Sources */,
+				E2975B8A21294ACF0065E2AE /* URLRequest+Additions.swift in Sources */,
+				E2810792212BADDC00E5A3C7 /* Requestable.swift in Sources */,
 				E2975B8421293F2C0065E2AE /* Instance.swift in Sources */,
 				E2975B8C21294B610065E2AE /* Timeline.swift in Sources */,
 				E2975B8221293E660065E2AE /* Account.swift in Sources */,
@@ -254,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2975B93212953C00065E2AE /* Timeline.swift in Sources */,
-				E281078C212A8FFE00E5A3C7 /* URLRequest+Auth.swift in Sources */,
+				E281078C212A8FFE00E5A3C7 /* URLRequest+Additions.swift in Sources */,
 				E281078B212A8F7C00E5A3C7 /* Decodable+Additions.swift in Sources */,
 				E2975B7D212925140065E2AE /* AppTests.swift in Sources */,
 				E2975B71212923AA0065E2AE /* MastodonKitTests.swift in Sources */,
@@ -263,6 +268,7 @@
 				E2975B942129556B0065E2AE /* Status.swift in Sources */,
 				E2975B87212948C60065E2AE /* AccountTests.swift in Sources */,
 				E2975B88212949830065E2AE /* Account.swift in Sources */,
+				E2810793212BB0EB00E5A3C7 /* Requestable.swift in Sources */,
 				E2975B95212955700065E2AE /* User.swift in Sources */,
 				E2975B92212953730065E2AE /* TimelineTests.swift in Sources */,
 			);

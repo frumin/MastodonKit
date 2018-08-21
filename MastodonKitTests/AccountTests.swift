@@ -46,7 +46,7 @@ class AccountTests: XCTestCase {
                     authenticationExpectation.fulfill()
                     return
                 }
-                Account.authenticate(user: params.user, password: params.pass, instance: instance!, registration: registration, completion: { (account, authError) in
+                Account.authenticate(user: params.user, password: params.pass, instance: instance!, app: registration, completion: { (account, authError) in
                     XCTAssertNil(authError)
                     XCTAssertNotNil(account)
                     authenticationExpectation.fulfill()
@@ -68,7 +68,7 @@ class AccountTests: XCTestCase {
                     authenticationExpectation.fulfill()
                     return
                 }
-                Account.authenticate(user: "a", password: "b", instance: instance!, registration: registration, completion: { (account, authError) in
+                Account.authenticate(user: "a", password: "b", instance: instance!, app: registration, completion: { (account, authError) in
                     XCTAssertNotNil(authError)
                     XCTAssertNil(account)
                     authenticationExpectation.fulfill()

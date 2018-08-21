@@ -43,13 +43,29 @@ public extension Instance {
     
 }
 
+extension Instance: Requestable {
+    
+    enum RequestType {
+        case instance(url: URL)
+    }
+    
+    static func request(for type: Instance.RequestType) -> URLRequest {
+        switch type {
+        case .instance(let instanceURL):
+            let url = instanceURL.appendingPathComponent("/api/v1/instance")
+            return URLRequest(url: url)
+        }
+    }
+    
+}
+
 public extension Instance {
     
     public typealias InstanceCompletion = (_ instance: Instance?, _ error: Error?) -> Void
     
     @discardableResult
     public static func instace(at url: URL, completion: InstanceCompletion?) -> URLSessionTask {
-        let request = URLRequest.instanceRequest(url: url)
+        let request = Instance.request(for: .instance(url: url))
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard error == nil, let data = data else {
                 completion?(nil, error)
@@ -64,15 +80,6 @@ public extension Instance {
         }
         task.resume()
         return task
-    }
-    
-}
-
-private extension URLRequest {
-    
-    static func instanceRequest(url instanceURL: URL) -> URLRequest {
-        let url = instanceURL.appendingPathComponent("/api/v1/instance")
-        return URLRequest(url: url)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  URLRequest+Auth.swift
+//  URLRequest+Additions.swift
 //  MastodonKit
 //
 //  Created by Tom Zaworowski on 8/18/18.

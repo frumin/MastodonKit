@@ -31,7 +31,7 @@ class TimelineTests: XCTestCase {
                     timelineExpectation.fulfill()
                     return
                 }
-                Account.authenticate(user: params.user, password: params.pass, instance: instance!, registration: registration, completion: { (account, authError) in
+                Account.authenticate(user: params.user, password: params.pass, instance: instance!, app: registration, completion: { (account, authError) in
                     XCTAssertNil(authError)
                     XCTAssertNotNil(account)
                     
