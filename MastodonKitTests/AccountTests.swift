@@ -39,7 +39,14 @@ class AccountTests: XCTestCase {
         let params = Params()
         let authenticationExpectation = XCTestExpectation(description: "auth")
         
-        Instance.instace(at: URL(string: params.instance)!) { (instance, error) in
+        let client = Client(url: URL(string: params.instance)!)
+        
+        let instanceTask = Instance.getInstanceTask
+        let instanceParser = JSONParser<Instance>()
+        
+        client.perform(task: instanceTask) { (data, error) in
+            let instance = try? instanceParser.parseBlock(data!)
+            
             instance?.register(application: "MastodonKit", scopes: [.read]) { (registration, error) in
                 guard let registration = registration else {
                     XCTAssert(false)
@@ -61,7 +68,14 @@ class AccountTests: XCTestCase {
         let params = Params()
         let authenticationExpectation = XCTestExpectation(description: "auth")
         
-        Instance.instace(at: URL(string: params.instance)!) { (instance, error) in
+        let client = Client(url: URL(string: params.instance)!)
+        
+        let instanceTask = Instance.getInstanceTask
+        let instanceParser = JSONParser<Instance>()
+        
+        client.perform(task: instanceTask) { (data, error) in
+            let instance = try? instanceParser.parseBlock(data!)
+            
             instance?.register(application: "MastodonKit", scopes: [.read]) { (registration, error) in
                 guard let registration = registration else {
                     XCTAssert(false)
@@ -74,6 +88,7 @@ class AccountTests: XCTestCase {
                     authenticationExpectation.fulfill()
                 })
             }
+            
         }
         
         wait(for: [authenticationExpectation], timeout: 20)

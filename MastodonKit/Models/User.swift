@@ -12,7 +12,7 @@ public class User: Codable {
     
     public let id: String
     public let username: String
-    public let name: String
+    public let uri: String
     public let displayName: String
     public let isLocked: Bool
     public let createdAt: String
@@ -25,7 +25,7 @@ public class User: Codable {
     public let staticAvatarURL: String
     public let headerURL: String
     public let staticHeaderURL: String
-    public let emojis: [String]
+    public let emojis: [Emoji]
     public let movedTo: User?
     public let isBot: Bool?
     // missing fields
@@ -37,7 +37,7 @@ public class User: Codable {
     private enum CodingKeys: String, CodingKey {
         case id
         case username
-        case name = "acct"
+        case uri = "acct"
         case displayName = "display_name"
         case isLocked = "locked"
         case createdAt = "created_at"

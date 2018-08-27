@@ -24,7 +24,15 @@ class AppRegistrationTests: XCTestCase {
         let params = Params()
         let registrationExpecation = expectation(description: "registration")
         
-        Instance.instace(at: URL(string: params.instance)!) { (instance, error) in
+        let client = Client(url: URL(string: params.instance)!)
+        
+        let instanceTask = Instance.getInstanceTask
+        let instanceParser = JSONParser<Instance>()
+        
+        client.perform(task: instanceTask) { (data, error) in
+            XCTAssertNil(error)
+            XCTAssertNotNil(data)
+            let instance = try? instanceParser.parseBlock(data!)
             XCTAssertNotNil(instance)
             instance?.register(application: "test", scopes: [.read, .write, .follow], appURL: nil) { (registration, error) in
                 XCTAssertNotNil(registration)
@@ -41,7 +49,14 @@ class AppRegistrationTests: XCTestCase {
         let params = Params()
         let registrationExpecation = expectation(description: "registration")
         
-        Instance.instace(at: URL(string: params.instance)!) { (instance, error) in
+        let client = Client(url: URL(string: params.instance)!)
+        
+        let instanceTask = Instance.getInstanceTask
+        let instanceParser = JSONParser<Instance>()
+        
+        client.perform(task: instanceTask) { (data, error) in
+            let instance = try? instanceParser.parseBlock(data!)
+            
             XCTAssertNotNil(instance)
             instance?.register(application: "test", redirectURIs: ["test"], scopes: [.read], appURL: nil) { (registration, error) in
                 XCTAssertNotNil(error)

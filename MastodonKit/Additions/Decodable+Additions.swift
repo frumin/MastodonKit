@@ -8,11 +8,11 @@
 
 import Foundation
 
-extension Decodable {
+public extension Decodable {
     
-    init(data: Data) throws {
+    public init(jsonData: Data) throws {
         let decoder = JSONDecoder()
-        self = try decoder.decode(Self.self, from: data)
+        self = try decoder.decode(Self.self, from: jsonData)
     }
     
 }
