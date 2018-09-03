@@ -56,3 +56,11 @@ public extension Instance {
     }
     
 }
+
+extension Instance: Equatable {
+    
+    public static func == (lhs: Instance, rhs: Instance) -> Bool {
+        return lhs.uri == rhs.uri
+    }
+    
+}

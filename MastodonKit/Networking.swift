@@ -66,9 +66,9 @@ public class AuthenticatedClient {
     
     private let instance: Instance
     private let app: App
-    private let account: Account
+    private let account: Authorization
     
-    public init(instance: Instance, app: App, account: Account) {
+    public init(instance: Instance, app: App, account: Authorization) {
         self.baseURL = instance.url
         self.instance = instance
         self.account = account

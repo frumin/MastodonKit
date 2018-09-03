@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E221B110213DAFC9005E27A6 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221B10F213DAFC9005E27A6 /* Attachment.swift */; };
+		E221B112213DB46A005E27A6 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221B111213DB46A005E27A6 /* Tag.swift */; };
+		E221B114213DB59D005E27A6 /* Mention.swift in Sources */ = {isa = PBXBuildFile; fileRef = E221B113213DB59D005E27A6 /* Mention.swift */; };
 		E2588863213379BF00FBACC4 /* Dictionary+Addtitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2588862213379BF00FBACC4 /* Dictionary+Addtitions.swift */; };
 		E2588865213381EB00FBACC4 /* Status+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2588864213381EB00FBACC4 /* Status+Tasks.swift */; };
 		E2588867213381FC00FBACC4 /* Instance+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2588866213381FC00FBACC4 /* Instance+Tasks.swift */; };
 		E25888692133820300FBACC4 /* App+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25888682133820300FBACC4 /* App+Tasks.swift */; };
-		E258886B2133821200FBACC4 /* Account+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258886A2133821200FBACC4 /* Account+Tasks.swift */; };
+		E258886B2133821200FBACC4 /* Authorization+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258886A2133821200FBACC4 /* Authorization+Tasks.swift */; };
 		E258886D2133822400FBACC4 /* Timeline+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258886C2133822400FBACC4 /* Timeline+Tasks.swift */; };
 		E258886F213391A500FBACC4 /* User+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258886E213391A500FBACC4 /* User+Tasks.swift */; };
 		E2588871213393B300FBACC4 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2588870213393B300FBACC4 /* Relationship.swift */; };
+		E25888752133983B00FBACC4 /* Instance+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2588866213381FC00FBACC4 /* Instance+Tasks.swift */; };
+		E25888762133983D00FBACC4 /* App+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25888682133820300FBACC4 /* App+Tasks.swift */; };
+		E25888772133983F00FBACC4 /* Authorization+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258886A2133821200FBACC4 /* Authorization+Tasks.swift */; };
+		E25888782133984200FBACC4 /* Timeline+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258886C2133822400FBACC4 /* Timeline+Tasks.swift */; };
+		E25888792133995800FBACC4 /* Dictionary+Addtitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2588862213379BF00FBACC4 /* Dictionary+Addtitions.swift */; };
 		E281078A212A8D5500E5A3C7 /* Decodable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2810789212A8D5500E5A3C7 /* Decodable+Additions.swift */; };
 		E281078B212A8F7C00E5A3C7 /* Decodable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2810789212A8D5500E5A3C7 /* Decodable+Additions.swift */; };
 		E281078C212A8FFE00E5A3C7 /* URLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8921294ACF0065E2AE /* URLRequest+Additions.swift */; };
@@ -26,11 +34,11 @@
 		E2975B7D212925140065E2AE /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B7C212925140065E2AE /* AppTests.swift */; };
 		E2975B7F2129258D0065E2AE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B7E2129258D0065E2AE /* App.swift */; };
 		E2975B80212932600065E2AE /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B7E2129258D0065E2AE /* App.swift */; };
-		E2975B8221293E660065E2AE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8121293E660065E2AE /* Account.swift */; };
+		E2975B8221293E660065E2AE /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8121293E660065E2AE /* Authorization.swift */; };
 		E2975B8421293F2C0065E2AE /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8321293F2C0065E2AE /* Instance.swift */; };
 		E2975B85212940730065E2AE /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8321293F2C0065E2AE /* Instance.swift */; };
 		E2975B87212948C60065E2AE /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B86212948C60065E2AE /* AccountTests.swift */; };
-		E2975B88212949830065E2AE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8121293E660065E2AE /* Account.swift */; };
+		E2975B88212949830065E2AE /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8121293E660065E2AE /* Authorization.swift */; };
 		E2975B8A21294ACF0065E2AE /* URLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8921294ACF0065E2AE /* URLRequest+Additions.swift */; };
 		E2975B8C21294B610065E2AE /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8B21294B610065E2AE /* Timeline.swift */; };
 		E2975B8E21294B890065E2AE /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2975B8D21294B890065E2AE /* Status.swift */; };
@@ -52,11 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E221B10F213DAFC9005E27A6 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		E221B111213DB46A005E27A6 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		E221B113213DB59D005E27A6 /* Mention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mention.swift; sourceTree = "<group>"; };
 		E2588862213379BF00FBACC4 /* Dictionary+Addtitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Addtitions.swift"; sourceTree = "<group>"; };
 		E2588864213381EB00FBACC4 /* Status+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Status+Tasks.swift"; sourceTree = "<group>"; };
 		E2588866213381FC00FBACC4 /* Instance+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+Tasks.swift"; sourceTree = "<group>"; };
 		E25888682133820300FBACC4 /* App+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Tasks.swift"; sourceTree = "<group>"; };
-		E258886A2133821200FBACC4 /* Account+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+Tasks.swift"; sourceTree = "<group>"; };
+		E258886A2133821200FBACC4 /* Authorization+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authorization+Tasks.swift"; sourceTree = "<group>"; };
 		E258886C2133822400FBACC4 /* Timeline+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timeline+Tasks.swift"; sourceTree = "<group>"; };
 		E258886E213391A500FBACC4 /* User+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+Tasks.swift"; sourceTree = "<group>"; };
 		E2588870213393B300FBACC4 /* Relationship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relationship.swift; sourceTree = "<group>"; };
@@ -71,7 +82,7 @@
 		E2975B72212923AA0065E2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2975B7C212925140065E2AE /* AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		E2975B7E2129258D0065E2AE /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
-		E2975B8121293E660065E2AE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		E2975B8121293E660065E2AE /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		E2975B8321293F2C0065E2AE /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		E2975B86212948C60065E2AE /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		E2975B8921294ACF0065E2AE /* URLRequest+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Additions.swift"; sourceTree = "<group>"; };
@@ -103,13 +114,16 @@
 		E25888722133970600FBACC4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E2975B8321293F2C0065E2AE /* Instance.swift */,
+				E221B10F213DAFC9005E27A6 /* Attachment.swift */,
 				E2975B7E2129258D0065E2AE /* App.swift */,
-				E2975B8121293E660065E2AE /* Account.swift */,
-				E2975B8B21294B610065E2AE /* Timeline.swift */,
-				E2975B8D21294B890065E2AE /* Status.swift */,
-				E2975B8F21294BCA0065E2AE /* User.swift */,
+				E2975B8121293E660065E2AE /* Authorization.swift */,
+				E2975B8321293F2C0065E2AE /* Instance.swift */,
+				E221B113213DB59D005E27A6 /* Mention.swift */,
 				E2588870213393B300FBACC4 /* Relationship.swift */,
+				E2975B8D21294B890065E2AE /* Status.swift */,
+				E221B111213DB46A005E27A6 /* Tag.swift */,
+				E2975B8B21294B610065E2AE /* Timeline.swift */,
+				E2975B8F21294BCA0065E2AE /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,7 +133,7 @@
 			children = (
 				E2588866213381FC00FBACC4 /* Instance+Tasks.swift */,
 				E25888682133820300FBACC4 /* App+Tasks.swift */,
-				E258886A2133821200FBACC4 /* Account+Tasks.swift */,
+				E258886A2133821200FBACC4 /* Authorization+Tasks.swift */,
 				E258886C2133822400FBACC4 /* Timeline+Tasks.swift */,
 				E2588864213381EB00FBACC4 /* Status+Tasks.swift */,
 				E258886E213391A500FBACC4 /* User+Tasks.swift */,
@@ -296,15 +310,18 @@
 				E2975B7F2129258D0065E2AE /* App.swift in Sources */,
 				E2588863213379BF00FBACC4 /* Dictionary+Addtitions.swift in Sources */,
 				E2810795212E4E8900E5A3C7 /* Networking.swift in Sources */,
+				E221B114213DB59D005E27A6 /* Mention.swift in Sources */,
 				E281078A212A8D5500E5A3C7 /* Decodable+Additions.swift in Sources */,
 				E25888692133820300FBACC4 /* App+Tasks.swift in Sources */,
 				E2975B8A21294ACF0065E2AE /* URLRequest+Additions.swift in Sources */,
 				E2588865213381EB00FBACC4 /* Status+Tasks.swift in Sources */,
+				E221B110213DAFC9005E27A6 /* Attachment.swift in Sources */,
+				E221B112213DB46A005E27A6 /* Tag.swift in Sources */,
 				E2975B8C21294B610065E2AE /* Timeline.swift in Sources */,
 				E2588871213393B300FBACC4 /* Relationship.swift in Sources */,
 				E258886F213391A500FBACC4 /* User+Tasks.swift in Sources */,
-				E258886B2133821200FBACC4 /* Account+Tasks.swift in Sources */,
-				E2975B8221293E660065E2AE /* Account.swift in Sources */,
+				E258886B2133821200FBACC4 /* Authorization+Tasks.swift in Sources */,
+				E2975B8221293E660065E2AE /* Authorization.swift in Sources */,
 				E2975B8E21294B890065E2AE /* Status.swift in Sources */,
 				E2975B9021294BCA0065E2AE /* User.swift in Sources */,
 			);
@@ -315,7 +332,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2975B93212953C00065E2AE /* Timeline.swift in Sources */,
+				E25888752133983B00FBACC4 /* Instance+Tasks.swift in Sources */,
+				E25888792133995800FBACC4 /* Dictionary+Addtitions.swift in Sources */,
 				E281078C212A8FFE00E5A3C7 /* URLRequest+Additions.swift in Sources */,
+				E25888782133984200FBACC4 /* Timeline+Tasks.swift in Sources */,
 				E281078B212A8F7C00E5A3C7 /* Decodable+Additions.swift in Sources */,
 				E2975B7D212925140065E2AE /* AppTests.swift in Sources */,
 				E2975B71212923AA0065E2AE /* MastodonKitTests.swift in Sources */,
@@ -323,7 +343,9 @@
 				E2975B80212932600065E2AE /* App.swift in Sources */,
 				E2975B942129556B0065E2AE /* Status.swift in Sources */,
 				E2975B87212948C60065E2AE /* AccountTests.swift in Sources */,
-				E2975B88212949830065E2AE /* Account.swift in Sources */,
+				E25888762133983D00FBACC4 /* App+Tasks.swift in Sources */,
+				E2975B88212949830065E2AE /* Authorization.swift in Sources */,
+				E25888772133983F00FBACC4 /* Authorization+Tasks.swift in Sources */,
 				E2975B95212955700065E2AE /* User.swift in Sources */,
 				E2975B92212953730065E2AE /* TimelineTests.swift in Sources */,
 				E2810796212E509200E5A3C7 /* Networking.swift in Sources */,

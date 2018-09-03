@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Account {
+public extension Authorization {
     
     public struct AuthenticateAccountTask: RequestTask {
         

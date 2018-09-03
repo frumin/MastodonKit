@@ -10,6 +10,13 @@ import Foundation
 
 public class Status: Codable {
     
+    public enum Visibility: String, Codable {
+        case `public`
+        case unlisted
+        case `private`
+        case direct
+    }
+    
     public let id: String
     public let uri: String
     public let url: String?
@@ -28,6 +35,10 @@ public class Status: Codable {
     public let isMuted: Bool?
     public let isSensitive: Bool
     public let spoilerText: String?
+    public let visibility: Visibility
+    public let attachments: [Attachment]
+    public let mentions: [Mention]
+    public let tags: [Tag]
     public let isPinned: Bool?
     
     init?() {
@@ -53,6 +64,10 @@ public class Status: Codable {
         case isMuted = "muted"
         case isSensitive = "sensitive"
         case spoilerText = "spoiler_text"
+        case visibility
+        case attachments = "media_attachments"
+        case mentions
+        case tags
         case isPinned = "pinned"
     }
     
@@ -78,7 +93,19 @@ public class Status: Codable {
         self.isMuted = try container.decodeIfPresent(Bool.self, forKey: .isMuted)
         self.isSensitive = try container.decode(Bool.self, forKey: .isSensitive)
         self.spoilerText = try container.decodeIfPresent(String.self, forKey: .spoilerText)
+        self.visibility = try container.decode(Visibility.self, forKey: .visibility)
+        self.attachments = try container.decode([Attachment].self, forKey: .attachments)
+        self.mentions = try container.decode([Mention].self, forKey: .mentions)
+        self.tags = try container.decode([Tag].self, forKey: .tags)
         self.isPinned = try container.decodeIfPresent(Bool.self, forKey: .isPinned)
+    }
+    
+}
+
+extension Status: Equatable {
+    
+    public static func == (lhs: Status, rhs: Status) -> Bool {
+        return lhs.id == rhs.id
     }
     
 }

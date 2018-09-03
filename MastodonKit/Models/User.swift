@@ -55,3 +55,11 @@ public class User: Codable {
         case isBot = "bot"
     }
 }
+
+extension User: Equatable {
+    
+    public static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+}

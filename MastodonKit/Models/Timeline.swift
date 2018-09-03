@@ -13,8 +13,7 @@ public struct Timeline {
     public let statuses: [Status]
     
     public init(jsonData: Data) throws {
-        let decoder = JSONDecoder()
-        self.statuses = try decoder.decode([Status].self, from: jsonData)
+        self.statuses = try [Status].self(jsonData: jsonData)
     }
     
 }

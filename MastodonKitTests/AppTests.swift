@@ -24,46 +24,23 @@ class AppRegistrationTests: XCTestCase {
         let params = Params()
         let registrationExpecation = expectation(description: "registration")
         
-        let client = Client(url: URL(string: params.instance)!)
+        let client = UnauthenticatedClient(url: URL(string: params.instance)!)
         
-        let instanceTask = Instance.getInstanceTask
-        let instanceParser = JSONParser<Instance>()
+        let instanceTask = Instance.GetInstanceTask()
+        let registerTask = Instance.RegisterAppTask(name: "test", scopes: [.read], appURL: nil)
         
         client.perform(task: instanceTask) { (data, error) in
             XCTAssertNil(error)
             XCTAssertNotNil(data)
-            let instance = try? instanceParser.parseBlock(data!)
+            let instance = try? Instance(jsonData: data!)
             XCTAssertNotNil(instance)
-            instance?.register(application: "test", scopes: [.read, .write, .follow], appURL: nil) { (registration, error) in
-                XCTAssertNotNil(registration)
+            client.perform(task: registerTask, completion: { (data, error) in
+                let app = try? App(jsonData: data!)
+                XCTAssertNotNil(app)
                 XCTAssertNil(error)
                 
                 registrationExpecation.fulfill()
-            }
-        }
-        
-        wait(for: [registrationExpecation], timeout: 10)
-    }
-    
-    func testApplicationRegistrationFailure() {
-        let params = Params()
-        let registrationExpecation = expectation(description: "registration")
-        
-        let client = Client(url: URL(string: params.instance)!)
-        
-        let instanceTask = Instance.getInstanceTask
-        let instanceParser = JSONParser<Instance>()
-        
-        client.perform(task: instanceTask) { (data, error) in
-            let instance = try? instanceParser.parseBlock(data!)
-            
-            XCTAssertNotNil(instance)
-            instance?.register(application: "test", redirectURIs: ["test"], scopes: [.read], appURL: nil) { (registration, error) in
-                XCTAssertNotNil(error)
-                XCTAssertNil(registration)
-                
-                registrationExpecation.fulfill()
-            }
+            })
         }
         
         wait(for: [registrationExpecation], timeout: 10)
