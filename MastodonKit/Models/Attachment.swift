@@ -21,14 +21,14 @@ public class Attachment: Codable {
         
     }
     
-    let id: String
-    let type: MediaType
-    let url: String
-    let remoteURL: String?
-    let previewURL: String
-    let textURL: String?
+    public let id: String
+    public let type: MediaType
+    public let url: String
+    public let remoteURL: String?
+    public let previewURL: String
+    public let textURL: String?
 //    let meta: Meta?
-    let description: String?
+    public let description: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
